@@ -1,0 +1,12 @@
+- # Login page for sessions...
+
+- flash.each do |_, message|
+    = message
+
+
+= form_with model: @user, url: sessions_path do |form|
+    = form.text_field :email
+    = form.password_field :password
+    = form.submit
+
+
